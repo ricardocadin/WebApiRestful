@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="tcc-app">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCC: Utilizando Rest com WebApi</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/ng-table.css" />
+    <link rel="stylesheet" href="css/tcc-styles.css" />
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <span class="navbar-brand">TCC - Utilizando REST com WebApi</span>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#/">Inicio</a></li>
+                    <li class="dropdown">
+                        
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Livros <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#/cadastrarLivro">Cadastrar</a></li>
+                            <li><a href="#/pesquisarLivros">Pesquisar</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        <div class="page" ng-view></div>
+    </div>
+
+    <script src="js/jquery/jquery-1.11.3.js"></script>
+    <script src="js/bootstrap/bootstrap.js"></script>
+    <script src="js/bootstrap/respond.js"></script>
+    <script src="js/angular/angular.js"></script>
+    <script src="js/angular/angular-route.js"></script>
+    <script src="js/angular/angular-resource.js"></script>
+    <script src="js/angular-ui/ui-bootstrap.js"></script>
+    <script src="js/angular-ui/ui-bootstrap-tpls.js"></script>
+    <script src="js/angular/directives/ngTable/ng-table.js"></script>
+
+    <script src="app.js"></script>
+    <script src="app/controllers/HomeController.js"></script>
+    <script src="app/controllers/PesquisarLivroController.js"></script>
+    <script src="app/controllers/CadastrarLivroController.js"></script>
+    <script src="app/services/apiService.js"></script>
+</body>
+</html>

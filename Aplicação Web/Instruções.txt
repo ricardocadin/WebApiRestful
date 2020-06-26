@@ -1,0 +1,22 @@
+1. Este é um projeto Web desenvolvido para consumir a API RESTful desenvolvida para 
+o trabalho.
+
+2. É necessário que as URLs de comunicação com a API esteja apontada para onde a
+aplicação RESTful está, ou seja, o endereço correto da API, também chamado de endereço
+base.
+
+3. Para isto, indentifique qual o endereço URI de sua API (domínio + porta) e troque no 
+arquivo app > services > apiService.js e altere a seguinte linha de código para
+o endereço que a API está apontando:
+
+var baseApiUrl = 'http://localhost:65469/Api/';
+
+4. Após trocar o endereço, basta inserir os arquivos em um servidor Web e executar a aplicação
+no domínio inserido.
+OBS: Para servidores podem ser utilizados o Wamp Server, Vertrigo, etc.
+
+5. Acesse a aplicação Web em seu Domínio e veja a mesma consumindo a API RESTful.
+Telas disponívies: Cadastro e Pesquisa
+
+6. OBS: Para que o serviço Web seja consumido, é necessário que tanto a aplicação Web
+esteja em um servidor e a API RESTful esteja executando em outro.

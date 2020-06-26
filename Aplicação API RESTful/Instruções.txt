@@ -1,0 +1,17 @@
+1. Para utilizar esta aplicação é necessário ter a IDE do Visual Studio Instalada,
+no mínimo na versão 2012.
+
+2. Após ter o Visual Studio Instalado, é só acessar a pasta "TCC.MyBooksRead" e acessar
+a Solution TCC.MyBooksRead.sln
+
+3. Após abrir a Solution, o código fonte estará todo disponível para consulta. O mesmo
+está repleto de comentários, a fim de ajudar na compreensão do que foi produzido.
+
+4. Para executar a solução, basta executar a aplicação apertando a tecla F5.
+OBS: é necessário ter o .NET framework instalado na máquina - Versão 4.0 superior
+
+5. O Visual Studio Simula um servidor nativo do IIS para que a API seja executada de maneira
+local, ou seja, é possível se comunicar com a mesma através das URLs de acesso.
+OBS: Observe em qual porta a aplicação está "escutando", como por exemplo, localhost:6650
+
+6. Basta testar a aplicação.

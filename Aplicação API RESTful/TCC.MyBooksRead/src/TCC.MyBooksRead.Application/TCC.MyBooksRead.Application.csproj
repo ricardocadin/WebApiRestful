@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{75117FF9-22BC-4F0D-A7E9-500BDBBB5011}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TCC.MyBooksRead.Application</RootNamespace>
+    <AssemblyName>TCC.MyBooksRead.Application</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\..\packages\AutoMapper.4.0.4\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="DomainValidation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\DomainValidation.1.0.0\lib\net45\DomainValidation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoMapper\AutoMapperConfiguration.cs" />
+    <Compile Include="AutoMapper\DomainToDtoMappingProfile.cs" />
+    <Compile Include="AutoMapper\DtoToDomainMappingProfile.cs" />
+    <Compile Include="CategoriasApplication.cs" />
+    <Compile Include="DTO\AutoresDTO.cs" />
+    <Compile Include="DTO\CategoriasExistentesDTO.cs" />
+    <Compile Include="DTO\FiltrosPesquisaDTO.cs" />
+    <Compile Include="DTO\LivrosDTO.cs" />
+    <Compile Include="DTO\MetasLivrosDTO.cs" />
+    <Compile Include="DTO\MetasExistentesDTO.cs" />
+    <Compile Include="DTO\PesquisaDTO.cs" />
+    <Compile Include="DTO\UsuariosDTO.cs" />
+    <Compile Include="Interfaces\ICategoriasApplication.cs" />
+    <Compile Include="Interfaces\ILivrosApplication.cs" />
+    <Compile Include="Interfaces\IMetasApplication.cs" />
+    <Compile Include="LivrosApplication.cs" />
+    <Compile Include="MetasApplication.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TCC.MyBooksRead.Domain\TCC.MyBooksRead.Domain.csproj">
+      <Project>{9c7c41e5-1f38-4ced-aeb0-8a0f0d5d8f71}</Project>
+      <Name>TCC.MyBooksRead.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TCC.MyBooksRead.Infra.CrossCutting\TCC.MyBooksRead.Infra.CrossCutting.csproj">
+      <Project>{e752688e-22b8-45a4-bf59-a4a7cd29ebd0}</Project>
+      <Name>TCC.MyBooksRead.Infra.CrossCutting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TCC.MyBooksRead.Infra.Data\TCC.MyBooksRead.Infra.Data.csproj">
+      <Project>{e896266d-4abf-4cca-9626-cc28acbf92b2}</Project>
+      <Name>TCC.MyBooksRead.Infra.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

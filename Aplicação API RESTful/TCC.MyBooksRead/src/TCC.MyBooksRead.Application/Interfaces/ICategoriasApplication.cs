@@ -1,0 +1,14 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using TCC.MyBooksRead.Application.DTO;
+
+namespace TCC.MyBooksRead.Application.Interfaces
+{
+    public interface ICategoriasApplication : IDisposable
+    {
+        IEnumerable<CategoriasExistentesDTO> BuscarCategoriasDominio();
+    }
+}
